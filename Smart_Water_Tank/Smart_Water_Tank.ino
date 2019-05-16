@@ -138,7 +138,7 @@ void setup() {
   Blynk.config(blynk_token);
 
   //Adding some timers here
-  timer.setInterval(1000L, sendDistance);
+  timer.setInterval(2000L, sendDistance);
   timer.setInterval(1000L, checkReset);
 }
 
@@ -196,6 +196,7 @@ void sendDistance(){
   Serial.print(", Overflow Height : "+String(overflowHeight));
   Serial.println(", V-Pin : "+String(pin));
   Serial.print("Blynk Connected : "+String(blynkConnected));
+  Serial.print(", Blynk Token : "+String(blynk_token));
   Serial.println(", Variation : "+String(variation));
 
   //updating water level in percentage
