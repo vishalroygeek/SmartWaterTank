@@ -12,7 +12,8 @@
 //Define variables
 long duration;
 int distance;
-int delayed = 0;
+int delay_reset = 0;
+int delay_water_filled = 0;
 bool shouldSaveConfig = false;
 bool blynkConnected = false;
 
@@ -149,16 +150,16 @@ void loop() {
 
 void checkReset(){
   //Reset everything if resetPin is set HIGH for longer duration
-  if(delayed == delayTime){
+  if(delay_reset >= delayTime){
     wifiManager.resetSettings();
     delay(1000);
     ESP.restart();
   }
 
   if(digitalRead(resetPin)==HIGH){
-     delayed = delayed+1000;
+     delay_reset = delay_reset+1000;
   }else{
-     delayed = 0;
+     delay_reset = 0;
   }
 }
 
@@ -204,9 +205,20 @@ void sendDistance(){
 
   //Checking if water has reached overflow level
   if(variation>=overflowHeight){
-    Blynk.virtualWrite(overflowPin, 1);
-    Serial.println("overflow");
+
+    if (delay_water_filled >= delayTime){
+      Blynk.virtualWrite(overflowPin, 1);
+      Serial.println("overflow");
+    }else{
+      //Adding 2 seconds to delay time, if water level is reached, but hasn't satisfied the minimum delay for turning off the pump
+      delay_water_filled = delay_water_filled + 2000;
+    }
+
+  }else{
+    //Resetting delay time if water level goes down the defined level
+    delay_water_filled = 0;
   }
+  
   
 }
 
