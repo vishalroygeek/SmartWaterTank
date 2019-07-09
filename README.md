@@ -1,6 +1,6 @@
 # SmartWaterTank - Save water with IoT 🚰
 
-Help saving some water by making your water tank smart. Flash the sktech right now on your NodeMCU chip and you are almost ready to go. This sketch not only saves water by turning off the pump for you, but also this helps you in getting a deep analysis of water level & consumption during a selected period of time. To use the sketch at its best, don't forget to watch the complete video tutorial given below.
+Help saving some water by making your water tank smart. Flash the sktech right now on your NodeMCU chip and you are almost ready to go. This sketch not only saves water by turning off the pump for you, but this also helps you in getting a deep analysis of water level & consumption during a selected period of time. To use the sketch at its best, don't forget to watch the complete video tutorial given below.
 
 # LICENSE
 ___
