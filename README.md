@@ -19,7 +19,7 @@ For making this project you're gonna need a NodeMCU and an Ultrasonic sensor. As
 
 Now download the Blynk app and setup a project. For viewing the water level add a graph widget and for controlling your water pump or water device you wanna interact with, create a webhook widget. Also copy the Blynk token of your project from the app.
 
-![Blynk App ScreenShot](https://github.com/vishalroygeek/SmartWaterTank/blob/master/assets/blynk-app-screenshot.png)
+<img src="https://github.com/vishalroygeek/SmartWaterTank/blob/master/assets/blynk-app-screenshot.png" width="300">
 
 #### 3. Finish
 
