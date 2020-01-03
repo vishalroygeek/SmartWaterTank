@@ -24,8 +24,9 @@ Now download the Blynk app and setup a project. For viewing the water level add 
 #### 3. Finish
 
 You should now create a webhook URL on IFTTT for performing action on your connected appliance. Once ready put your URL in the webhook widget of the Blynk project we created in step 2. Now you can plug in your NodeMCU and configure it from your mobile phone. Once configured, your NodeMCU will restart and should be shown online in the Blynk app dashboard.
+------
 
-✋ If you wish, you can deep dive into the arduino sketch and can modify it according to your needs. There you should also be able to find some more components attaching options already available. Like - Reset button & Status LED.
+**✋ If you wish, you can deep dive into the arduino sketch and can modify it according to your needs. There you should also be able to find some more components attaching options already available. Like - Reset button & Status LED.**
 
 
 # LICENSE
